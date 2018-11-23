@@ -18,11 +18,21 @@
                 <div class="col-3 profil"><img src="./public/img/coco.png" alt="Corentin"></div>
                 <span class="nem">Corentin Pelaprat</span>
             </div>
-            <div class="col-1 text-center choua">Home <br> <i class="fas fa-home text-center"></i></div>
-            <div class="col-1 text-center choua">About Me <br> <i class="fas fa-meh"></i></div>
-            <div class="col-1 text-center choua">Resume <br> <i class="far fa-file"></i></div>
-            <div class="col-1 text-center choua">Portfolio <br> <i class="fas fa-paint-brush"></i></div>
-            <div class="col-1 text-center choua">Contact <br> <i class="fas fa-mobile-alt"></i></div>
+            <a class="om col-1 text-center">
+                <div class="select">Home <br> <i class="fas fa-home text-center"></i></div>
+            </a>
+            <a class="about col-1 text-center">
+                <div class="choua">About Me <br> <i class="fas fa-meh"></i></div>
+            </a>
+            <a class="cv col-1 text-center">
+                <div class="choua">Resume <br> <i class="far fa-file"></i></div>
+            </a>
+            <a class="folio col-1 text-center">
+                <div class="choua">Portfolio <br> <i class="fas fa-paint-brush"></i></div>
+            </a>
+            <a class="adress col-1 text-center">
+                <div class="choua">Contact <br> <i class="fas fa-mobile-alt"></i></div>
+            </a>
         </nav>
     </header>
     <div class="home">
@@ -34,21 +44,30 @@
     </div>
 
     <section class="container aboutMe">
-        <h1 class="text-center">About Me :</h1>
+        <h1 class="text-center text-secondary pt-4 pb-4">About Me :</h1>
         <div class="row">
-            <div class="col-4">img</div>
-            <div class="col-4">Présentations</div>
-            <div class="col-4">Infos</div>
+            <div class="col-4"><img src="./public/img/coco.png" alt="coco"></div>
+            <div class="col-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur unde cumque quae?
+                Inventore, veniam aperiam! Eos tenetur exercitationem esse iste possimus dolores, harum doloribus
+                aspernatur ipsa. Voluptas quas quidem delectus reprehenderit aperiam, dignissimos natus deserunt vero
+                omnis odio quo nemo?</div>
+            <div class="col-4">
+                <b>Âge :</b> <span>23</span> <br> <br>
+                <b>Téléphone :</b> <span>+33 7 81 08 77 10</span> <br> <br>
+                <b>Mail :</b> <span>corentin.pelaprat@gmail.com / gribouillos.officiel@gmail.com</span> <br> <br>
+                <b>Instagram :</b> <span>No_truche / Gribouillos</span> <br><br>
+                <b>Adresse</b> <span>Saint-Josse</span> <br> <br>
+            </div>
         </div>
-        <h1>Services :</h1>
+        <h1 class="text-center text-secondary pt-4 pb-4">Services :</h1>
         <div class="row">
-            <div class="col-3">Service</div>
-            <div class="col-3">Service</div>
-            <div class="col-3">Service</div>
-            <div class="col-3">Service</div>
+            <div class="col-3 text-center services text-primary mb-5">Site web <br><i class="fas fa-tv"></i></div>
+            <div class="col-3 text-center services text-primary mb-5">Application <br><i class="fas fa-mobile-alt"></i></div>
+            <div class="col-3 text-center services text-primary mb-5">Design <br> <i class="fas fa-pencil-alt"></i></div>
+            <div class="col-3 text-center services text-primary mb-5">Maintenance <br><i class="fas fa-tasks"></i></div>
         </div>
     </section>
-    <section>
+    <section class="resume">
         <h1>Resume</h1>
         <div class="row">
             <div class="col-4"></div>
@@ -56,7 +75,7 @@
             <div class="col-4"></div>
         </div>
     </section>
-    <section>
+    <section class="portfolio">
         <h1>Portfolio</h1>
         <div class="row">
             <span class="col-2">Filtre</span>
@@ -70,15 +89,13 @@
             <div class="col-3"></div>
         </div>
     </section>
-    <section>
+    <section class="contact">
         <h1>Contact</h1>
         <div class="row">
             <div class="col-6"></div>
             <div class="col-6"></div>
         </div>
     </section>
-
-
 
 
 
