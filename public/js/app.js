@@ -4,18 +4,66 @@ document.querySelector(".cv").addEventListener("click", cv)
 document.querySelector(".adress").addEventListener("click", contact)
 document.querySelector(".folio").addEventListener("click", port)
 var opa = 1
+var about = false
+var resume = false
+var portfolio = false
+var contact = false
 
 function home() {
-    var elem = document.querySelector(".aboutMe");
-    var di = setInterval(frame, 20);
-    function frame() {
-        if (opa < 0) {
-            clearInterval(di);
-            opa = 1
-            next()
-        } else {
-            opa = opa - 0.1;
-            elem.style.opacity = opa;
+    if (about == true) {
+        var elem = document.querySelector(".aboutMe");
+        var di = setInterval(frame, 20);
+        function frame() {
+            if (opa < 0) {
+                clearInterval(di);
+                opa = 1
+                next()
+            } else {
+                opa = opa - 0.1;
+                elem.style.opacity = opa;
+            }
+        }
+    }
+    else if (resume == true) {
+        var elem = document.querySelector(".resume");
+        var di = setInterval(frame, 20);
+        function frame() {
+            if (opa < 0) {
+                clearInterval(di);
+                opa = 1
+                next()
+            } else {
+                opa = opa - 0.1;
+                elem.style.opacity = opa;
+            }
+        }
+    }
+    else if (contact == true) {
+        var elem = document.querySelector(".contact");
+        var di = setInterval(frame, 20);
+        function frame() {
+            if (opa < 0) {
+                clearInterval(di);
+                opa = 1
+                next()
+            } else {
+                opa = opa - 0.1;
+                elem.style.opacity = opa;
+            }
+        }
+    }
+    else if (portfolio == true) {
+        var elem = document.querySelector(".portfolio");
+        var di = setInterval(frame, 20);
+        function frame() {
+            if (opa < 0) {
+                clearInterval(di);
+                opa = 1
+                next()
+            } else {
+                opa = opa - 0.1;
+                elem.style.opacity = opa;
+            }
         }
     }
     function next() {
@@ -34,6 +82,10 @@ function home() {
         document.querySelector(".folio").firstElementChild.classList.add("choua")
         document.querySelector(".adress").firstElementChild.classList.add("choua")
     }
+    about = false
+    resume = false
+    portfolio = false
+    contact = false
 
 }
 
@@ -65,11 +117,16 @@ function aboutMe() {
             elem.style.right = pos + 'px';
         }
     }
+    about = true
+    resume = false
+    portfolio = false
+    contact = false
 
 }
 
 function cv() {
     document.querySelector(".resume").style.display = "block"
+    document.querySelector(".resume").style.opacity = 1
     document.querySelector(".aboutMe").style.display = "none"
     document.querySelector(".contact").style.display = "none"
     document.querySelector(".portfolio").style.display = "none"
@@ -83,6 +140,21 @@ function cv() {
     document.querySelector(".om").firstElementChild.classList.add("choua")
     document.querySelector(".folio").firstElementChild.classList.add("choua")
     document.querySelector(".adress").firstElementChild.classList.add("choua")
+    var elem = document.querySelector(".resume");
+    var pos = -1200;
+    var id = setInterval(frame, 0);
+    function frame() {
+        if (pos == 350) {
+            clearInterval(id);
+        } else {
+            pos = pos + 50;
+            elem.style.right = pos + 'px';
+        }
+    }
+    resume = true
+    about = false
+    portfolio = false
+    contact = false
 }
 
 function contact() {
@@ -100,6 +172,11 @@ function contact() {
     document.querySelector(".cv").firstElementChild.classList.add("choua")
     document.querySelector(".folio").firstElementChild.classList.add("choua")
     document.querySelector(".om").firstElementChild.classList.add("choua")
+
+    contact = true
+    about = false
+    resume = false
+    portfolio = false
 }
 
 function port() {
@@ -117,4 +194,10 @@ function port() {
     document.querySelector(".cv").firstElementChild.classList.add("choua")
     document.querySelector(".om").firstElementChild.classList.add("choua")
     document.querySelector(".adress").firstElementChild.classList.add("choua")
+
+    portfolio = true
+    about = false
+    resume = false
+    contact = false
+
 }
