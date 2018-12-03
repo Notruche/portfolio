@@ -3,11 +3,40 @@ document.querySelector(".about").addEventListener("click", aboutMe)
 document.querySelector(".cv").addEventListener("click", cv)
 document.querySelector(".adress").addEventListener("click", contact)
 document.querySelector(".folio").addEventListener("click", port)
+document.querySelector(".btnall").addEventListener("click", all)
+document.querySelector(".btnun").addEventListener("click", un)
+document.querySelector(".btnde").addEventListener("click", de)
 var opa = 1
 var about = false
 var resume = false
 var portfolio = false
 var contact = false
+
+function all() {
+    var i = 0
+    while (i < 8) {
+        document.querySelectorAll(".im")[i].style.display = "block"
+        i++
+    }
+}
+
+function un() {
+    var i = 0
+    while (i < 4) {
+        document.querySelectorAll(".un")[i].style.display = "block"
+        document.querySelectorAll(".deux")[i].style.display = "none"
+        i++
+    }
+}
+
+function de() {
+    var i = 0
+    while (i < 4) {
+        document.querySelectorAll(".deux")[i].style.display = "block"
+        document.querySelectorAll(".un")[i].style.display = "none"
+        i++
+    }
+}
 
 function home() {
     if (about == true) {
@@ -181,9 +210,10 @@ function contact() {
 
 function port() {
     document.querySelector(".portfolio").style.display = "block"
+    document.querySelector(".portfolio").style.opacity = 1
     document.querySelector(".aboutMe").style.display = "none"
-    document.querySelector(".resume").style.display = "block"
-    document.querySelector(".contact").style.display = "block"
+    document.querySelector(".resume").style.display = "none"
+    document.querySelector(".contact").style.display = "none"
     document.querySelector(".folio").firstElementChild.classList.add("select")
     document.querySelector(".folio").firstElementChild.classList.remove("choua")
     document.querySelector(".about").firstElementChild.classList.remove("select")
@@ -199,5 +229,17 @@ function port() {
     about = false
     resume = false
     contact = false
+
+    var elem = document.querySelector(".portfolio");
+    var pos = -1200;
+    var am = setInterval(frame, 0);
+    function frame() {
+        if (pos == 350) {
+            clearInterval(am);
+        } else {
+            pos = pos + 50;
+            elem.style.right = pos + 'px';
+        }
+    }
 
 }
